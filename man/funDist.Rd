@@ -13,7 +13,7 @@ funDist(grid, x, y, metric, p = NULL, lambda = NULL, phi = NULL)
 
 \item{y}{a vector containing the second curve.}
 
-\item{metric}{the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance}
+\item{metric}{the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance.}
 
 \item{p}{a positive numeric value containing the parameter of the regularizing function for the generalized Mahalanobis distance.}
 

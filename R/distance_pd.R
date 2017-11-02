@@ -4,7 +4,7 @@
 #' @param grid the grid (of length \code{T}) over which the two curves are defined.
 #' @param x a vector containing the first curve.
 #' @param y a vector containing the second curve.
-#' @param metric the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance
+#' @param metric the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance.
 #' @param p a positive numeric value containing the parameter of the regularizing function for the generalized Mahalanobis distance.
 #' @param lambda a vector containing the eigenvalues of the functional data from which \code{"x"} and \code{"y"} are extracted.
 #' @param phi a matrix containing the eigenfunctions of the functional data from which \code{"x"} and \code{"y"} are extracted.
