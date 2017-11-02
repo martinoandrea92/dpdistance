@@ -7,11 +7,11 @@
 dp.kmeans(FD, n.cl = 2, metric, p = NULL)
 }
 \arguments{
-\item{FD}{a functional data object of type \code{funData}}
+\item{FD}{a functional data object of type \code{funData}.}
 
 \item{n.cl}{an integer representing the number of clusters.}
 
-\item{metric}{the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance}
+\item{metric}{the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance.}
 
 \item{p}{a positive numeric value containing the parameter of the regularizing function for the generalized Mahalanobis distance.}
 }

@@ -10,7 +10,7 @@ funData(grid, data)
 \arguments{
 \item{grid}{the grid (of length \code{T}) over which the functional dataset is defined.}
 
-\item{data}{a vector, a matrix or a \code{list} of \code{d} vectors or matrices containing the functional data}
+\item{data}{a vector, a matrix or a \code{list} of \code{d} vectors or matrices containing the functional data.}
 }
 \value{
 The function returns a \code{S3} object of class \code{funData}, containing

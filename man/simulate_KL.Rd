@@ -9,15 +9,15 @@ simulate_KL(grid, size, mean, covariance = NULL, rho = NULL, theta = NULL)
 \arguments{
 \item{grid}{the grid (of length \code{T}) over which the functional datasets are defined.}
 
-\item{size}{a positive integer indicating the size of the functional sample to simulate}
+\item{size}{a positive integer indicating the size of the functional sample to simulate.}
 
-\item{mean}{a vector representing the mean of the sample}
+\item{mean}{a vector representing the mean of the sample.}
 
-\item{covariance}{a matrix from which the eigenvalues and eigenfunctions must be extracted}
+\item{covariance}{a matrix from which the eigenvalues and eigenfunctions must be extracted.}
 
-\item{rho}{a vector of the eigenvalues to be used for the simulation}
+\item{rho}{a vector of the eigenvalues to be used for the simulation.}
 
-\item{theta}{a matrix of the eigenfunctions to be used for the simulation}
+\item{theta}{a matrix of the eigenfunctions to be used for the simulation.}
 }
 \value{
 The function returns a functional data object of type \code{funData}.

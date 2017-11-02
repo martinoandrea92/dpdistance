@@ -3,7 +3,6 @@
 S3method(plot,funData)
 export(dp.diss)
 export(dp.kmeans)
-export(dp.test)
 export(dp.test1)
 export(funData)
 export(funDist)

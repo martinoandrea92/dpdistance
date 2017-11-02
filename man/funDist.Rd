@@ -28,7 +28,7 @@ The function returns a numeric value indicating the distance between the two cur
 This function allows you to compute the distance between two curves with the chosen metric.
 }
 \examples{
-# Define parameters
+# Define parameters:
 n <- 50
 P <- 100
 K <- 150

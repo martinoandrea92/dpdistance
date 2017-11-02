@@ -7,11 +7,11 @@
 dp.test1(FD1, FD2, conf.level = 0.95, stat_test, p = NULL)
 }
 \arguments{
-\item{FD1}{a functional data object of type \code{funData} of the first sample}
+\item{FD1}{a functional data object of type \code{funData} of the first sample.}
 
-\item{FD2}{a functional data object of type \code{funData} of the second sample}
+\item{FD2}{a functional data object of type \code{funData} of the second sample.}
 
-\item{conf.level}{confidence level of the test}
+\item{conf.level}{confidence level of the test.}
 
 \item{stat_test}{the chosen test statistic to be used: \code{"L2"} for the classical L2-distance, \code{"L2_trunc"} for the truncated L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance}
 

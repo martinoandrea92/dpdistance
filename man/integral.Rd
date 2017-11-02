@@ -7,9 +7,9 @@
 integral(grid, values)
 }
 \arguments{
-\item{grid}{a vector}
+\item{grid}{a vector.}
 
-\item{values}{a vector}
+\item{values}{a vector.}
 }
 \value{
 The function returns a numeric value indicating the value of the integral under the curve.
