@@ -2,7 +2,7 @@
 #' \code{S3} Class for functional datasets.
 #' A class for univariate or multivariate functional dataset.
 #' @param grid the grid (of length \code{T}) over which the functional dataset is defined.
-#' @param data a vector, a matrix or a \code{list} of \code{d} vectors or matrices containing the functional data
+#' @param data a vector, a matrix or a \code{list} of \code{d} vectors or matrices containing the functional data.
 #'
 #' @return The function returns a \code{S3} object of class \code{funData}, containing
 #' the \code{grid} over which the functional dataset is defined and a matrix or a \code{list}

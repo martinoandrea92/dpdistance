@@ -19,7 +19,7 @@
 #'
 #' @export
 #' @examples
-#' # Define parameters
+#' # Define parameters:
 #' n <- 50
 #' P <- 100
 #' K <- 150

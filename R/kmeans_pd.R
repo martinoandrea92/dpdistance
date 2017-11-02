@@ -1,9 +1,9 @@
 #' k-means clustering algorithm
 #'
 #' This function performs a k-means clustering algorithm on an univariate or multivariate functional data using a generalization of Mahalanobis distance.
-#' @param FD a functional data object of type \code{funData}
+#' @param FD a functional data object of type \code{funData}.
 #' @param n.cl an integer representing the number of clusters.
-#' @param metric the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance
+#' @param metric the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance.
 #' @param p a positive numeric value containing the parameter of the regularizing function for the generalized Mahalanobis distance.
 #' @keywords Clustering
 #' @return The function returns a list with the following components:

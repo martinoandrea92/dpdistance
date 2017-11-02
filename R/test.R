@@ -1,9 +1,9 @@
 #' Two-sample hypotesis tests
 #'
 #' Performs a  two sample hypotesis tests on two samples of functional data.
-#' @param FD1 a functional data object of type \code{funData} of the first sample
-#' @param FD2 a functional data object of type \code{funData} of the second sample
-#' @param conf.level confidence level of the test
+#' @param FD1 a functional data object of type \code{funData} of the first sample.
+#' @param FD2 a functional data object of type \code{funData} of the second sample.
+#' @param conf.level confidence level of the test.
 #' @param stat_test the chosen test statistic to be used: \code{"L2"} for the classical L2-distance, \code{"L2_trunc"} for the truncated L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance
 #' @param p a vector of positive numeric value containing the parameters of the regularizing function for the generalized Mahalanobis distance.
 #' @keywords Inference

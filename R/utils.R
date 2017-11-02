@@ -1,8 +1,8 @@
 #' Integral function
 #'
 #' This function computes the integral of a function defined on a grid of values.
-#' @param grid a vector
-#' @param values a vector
+#' @param grid a vector.
+#' @param values a vector.
 #' @export
 #' @return The function returns a numeric value indicating the value of the integral under the curve.
 #' @examples

@@ -2,11 +2,11 @@
 #'
 #' Simulate a functional sample using a Karhunen Loève expansion
 #' @param grid the grid (of length \code{T}) over which the functional datasets are defined.
-#' @param size a positive integer indicating the size of the functional sample to simulate
-#' @param mean a vector representing the mean of the sample
-#' @param covariance a matrix from which the eigenvalues and eigenfunctions must be extracted
-#' @param rho a vector of the eigenvalues to be used for the simulation
-#' @param theta a matrix of the eigenfunctions to be used for the simulation
+#' @param size a positive integer indicating the size of the functional sample to simulate.
+#' @param mean a vector representing the mean of the sample.
+#' @param covariance a matrix from which the eigenvalues and eigenfunctions must be extracted.
+#' @param rho a vector of the eigenvalues to be used for the simulation.
+#' @param theta a matrix of the eigenfunctions to be used for the simulation.
 #' @keywords Simulation
 #' @return The function returns a functional data object of type \code{funData}.
 #'
