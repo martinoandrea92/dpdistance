@@ -13,8 +13,7 @@
 }
 \description{
 This function performs the plot of a functional univariate dataset stored in
-an object of class \code{funData}. It is able to accept all the usual
-customisable graphical parameters, otherwise it will use the default ones.
+an object of class \code{funData}.
 }
 \examples{
 

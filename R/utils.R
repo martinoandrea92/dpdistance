@@ -1,15 +1,3 @@
-#' Integral function
-#'
-#' This function computes the integral of a function defined on a grid of values.
-#' @param grid a vector.
-#' @param values a vector.
-#' @export
-#' @return The function returns a numeric value indicating the value of the integral under the curve.
-#' @examples
-#' grid <- seq( 0, 1, length.out = 1000 )
-#' values <- grid^2
-#' I <- integral( grid, values )
-
 integral <- function ( grid, values ) {
   return( sum( ( values[ -1 ] + values[ -length( values ) ] ) * diff( grid ) / 2 ) )
 }

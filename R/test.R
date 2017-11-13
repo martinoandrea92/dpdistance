@@ -61,9 +61,9 @@
 #' x1 <- simulate_KL( t, n, m1, rho = lambda, theta = theta )
 #' x2 <- simulate_KL( t, n, m2, rho = lambda, theta = theta )
 #'
-#' output <- dp.test1( x1, x2, 0.95, "L2", 1 )
+#' output <- gmfd_test2( x1, x2, 0.95, "L2", 1 )
 
-dp.test1 <- function( FD1, FD2, conf.level = 0.95, stat_test, p = NULL ) {
+gmfd_test2 <- function( FD1, FD2, conf.level = 0.95, stat_test, p = NULL ) {
   grid <- FD1$grid
   x <- FD1$data
   y <- FD2$data
@@ -100,8 +100,34 @@ dp.test1 <- function( FD1, FD2, conf.level = 0.95, stat_test, p = NULL ) {
   v2hat <- cov( yR )
   cn <- n1 / N
   vhat <- ( 1 - cn ) * v1hat + cn * v2hat
-  Vhat <- eigen( vhat )$vectors	# autofunzioni di vhat
-  dhat <- eigen( vhat )$values		# autovalori di vhat
+
+  Vhat <- eigen( vhat )$vectors	* sqrt( P / I ) # autofunzioni di vhat
+  dhat <- eigen( vhat )$values * I / P		# autovalori di vhat
+
+  Vhat1 <- eigen( v1hat )$vectors	* sqrt( P / I ) # autofunzioni di vhat
+  dhat1 <- eigen( v1hat )$values * I / P		# autovalori di vhat
+
+  Vhat2 <- eigen( v2hat )$vectors	* sqrt( P / I ) # autofunzioni di vhat
+  dhat2 <- eigen( v2hat )$values * I / P		# autovalori di vhat
+
+  size <- 10^3
+  z1 <- matrix(0, size, n1 - 1 )
+  z2 <- matrix(0, size, n2 - 1 )
+  x_m1 <- matrix(0, size, P)
+  x_m2 <- matrix(0, size, P)
+
+  for (i in 1:size) {
+    z1[i, ] <- rnorm( n1 - 1, 0 , 1/sqrt( n1 ) )
+    for ( k in 1:( n1 - 1 ) ) {
+      x_m1[i, ] <- x_m1[i, ] + sqrt( dhat1[k] ) * (z1[i, k] * Vhat1[, k] )
+    }
+  }
+  for (i in 1:size) {
+    z2[i, ] <- rnorm( n2 - 1, 0 , 1/sqrt( n2 ) )
+    for ( k in 1:( n2 - 1 ) ) {
+      x_m2[i, ] <- x_m2[i, ] + sqrt( dhat2[k] ) * (z2[i, k] * Vhat2[, k] )
+    }
+  }
 
   iter <- 100
   T0_1pop_vhat <- rep( 0, iter )	# le statistiche test con i diversi p
@@ -113,7 +139,7 @@ dp.test1 <- function( FD1, FD2, conf.level = 0.95, stat_test, p = NULL ) {
 
   if ( stat_test == "mahalanobis" ) {
     for ( w in 1:10^3 ) {
-      dist_H0_vhat[w] <- sum( rchisq( M, 1 ) * hhat( p, dhat[1:M] ) )
+      dist_H0_vhat[w] <- ( 1 / n1 + 1 / n2 )^( - 1 / 2 ) * funDist(grid, x_m1[w, ], x_m2[w, ], "mahalanobis", p = p, lambda = dhat, phi = Vhat)
     }
   }
   #else if (stat_test == "L2_trunc") {

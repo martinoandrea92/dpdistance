@@ -1,7 +1,7 @@
 #' Distance function
 #'
 #' This function allows you to compute the distance between two curves with the chosen metric.
-#' @param grid the grid (of length \code{T}) over which the two curves are defined.
+#' @param grid the grid over which the two curves are defined.
 #' @param x a vector containing the first curve.
 #' @param y a vector containing the second curve.
 #' @param metric the chosen distance to be used: \code{"L2"} for the classical L2-distance, \code{"trunc"} for the truncated Mahalanobis semi-distance, \code{"mahalanobis"} for the generalized Mahalanobis distance.
@@ -163,9 +163,9 @@ funDist <- function ( grid, x, y, metric, p = NULL, lambda = NULL, phi = NULL ) 
 #' # Simulate the functional data
 #' FD <- simulate_KL( t, n, m1, rho = lambda, theta = theta )
 #'
-#' D <- dp.diss(FD, metric = "L2")
+#' D <- gmfd_diss(FD, metric = "L2")
 
-dp.diss <- function( FD, metric, p = NULL ) {
+gmfd_diss <- function( FD, metric, p = NULL ) {
   grid <- FD$grid
   data <- FD$data
   # if data is a univariate functional data, transform it to lists

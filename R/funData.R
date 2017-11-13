@@ -59,8 +59,7 @@ funData = function( grid, data )
 #' A method to plot \code{funData} objects
 #'
 #' This function performs the plot of a functional univariate dataset stored in
-#' an object of class \code{funData}. It is able to accept all the usual
-#' customisable graphical parameters, otherwise it will use the default ones.
+#' an object of class \code{funData}.
 #'
 #' @param x the univariate functional dataset in form of \code{funData} object.
 #' @param ... additional graphical parameters to be used in plotting functions

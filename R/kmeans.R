@@ -64,9 +64,9 @@
 #' # Create a single functional dataset containing the simulated datasets:
 #' FD <- funData(t, rbind( x1$data[[1]], x2$data[[1]] ) )
 #'
-#' output <- dp.kmeans( FD, n.cl = 2, metric = "mahalanobis", p = 10^6 )
+#' output <- gmfd_kmeans( FD, n.cl = 2, metric = "mahalanobis", p = 10^6 )
 
-dp.kmeans <- function( FD, n.cl = 2, metric, p = NULL) {
+gmfd_kmeans <- function( FD, n.cl = 2, metric, p = NULL) {
   grid <- FD$grid
   data <- FD$data
   if ( n.cl - round( n.cl ) != 0 ) {

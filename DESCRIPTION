@@ -1,4 +1,4 @@
-Package: dpdistance
+Package: gmfd
 Type: Package
 Title: Inference and Clustering of Functional Data
 Version: 0.1
